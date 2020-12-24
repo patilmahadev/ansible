@@ -1,0 +1,18 @@
+---
+- name: Install Apache Server
+  apt:
+    name: apache2
+    state: present
+
+- name: Copy index file
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Start Apache Service
+  service:
+    name: apache2
+    state: started

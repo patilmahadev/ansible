@@ -1,0 +1,24 @@
+---
+- name: Install Apache Server
+  yum:
+    name: httpd
+    state: present
+
+- name: Create index file
+  template:
+    src: index.html.j2
+    dest: "{{ doc_root }}/index.html"
+    owner: root
+    group: root
+    mode: 0755
+  vars:
+    env: production
+    os: "{{ ansible_os_family }}"
+    host: "{{ ansible_hostname }}"
+  notify:
+    - Restart httpd
+
+- name: Start Apache Service
+  service:
+    name: httpd
+    state: started
