@@ -1,0 +1,5 @@
+---
+# vars file for tomcat
+
+tomcat_url: https://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.107/bin/apache-tomcat-7.0.107.tar.gz
+JAVA_HOME: /usr/lib/jvm/jre
