@@ -1,5 +1,5 @@
 ---
 # vars file for tomcat
 
-tomcat_url: https://mirrors.estointernet.in/apache/tomcat/tomcat-7/v7.0.108/bin/apache-tomcat-7.0.108.tar.gz
+tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.79/bin/apache-tomcat-8.5.79.tar.gz
 JAVA_HOME: /usr/lib/jvm/jre
